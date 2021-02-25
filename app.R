@@ -3,6 +3,7 @@ library(markdown)
 library(deSolve)
 library(plotly)
 library(tidyverse)
+library(shinythemes)
 
 time <- seq(0,50,by = 0.01)
 
@@ -63,7 +64,8 @@ inhibitions <- list("Competitive inhibition" = competitive_inhibition,
                     "Uncompetitive inhibition" = uncompetitive_inhibition)
 
 
-ui <- navbarPage("Biology simulations",
+ui <- navbarPage(theme = shinytheme("united"),
+                 "Biology simulations",
                  navbarMenu("Ecology",
                             tabPanel("Lotka–Volterra",
                             titlePanel("Grobuonio ir plėšrūno modelis"), 
